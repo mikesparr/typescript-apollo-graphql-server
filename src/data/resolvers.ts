@@ -1,17 +1,17 @@
-const books: Array<{[key: string]: any}> = [
-    {
-        author: "J.K. Rowling",
-        title: "Harry Potter and the Chamber of Secrets",
-    },
-    {
-        author: "Michael Crichton",
-        title: "Jurassic Park",
-    },
-];
+import mocks from "../model/mocks";
 
-const resolvers: {[key: string]: any} = {
+// TODO: move to model and call class method(s)
+const add = (book: {[key: string]: any}): Array<{[key: string]: any}> => {
+    mocks.push(book);
+    return mocks;
+};
+
+const resolvers: any = {
+    Mutation: {
+        addBook: (root: any, args: {[key: string]: any}) => add(args.book),
+    },
     Query: {
-        books: () => books,
+        books: () => mocks,
     },
 };
 
