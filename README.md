@@ -15,7 +15,7 @@ npm run start-dev
 * if you want to test changes, open another terminal and run npm run build and `nodemon` will pick up changes in `/dest` compiled JS files
 
 # Query
- * point browser to http://localhost/graphql
+ * point browser to http://localhost:4000/graphql
  * paste the following in for your first query
 
  ## Query
