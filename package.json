@@ -7,8 +7,8 @@
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "lint": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'",
-    "start": "./node_modules/.bin/babel-node dist/server.js",
-    "start-dev": "nodemon --exec ./node_modules/.bin/babel-node dist/server.js",
+    "start": "node dist/server.js",
+    "start-dev": "nodemon --exec node dist/server.js",
     "test": "./node_modules/.bin/jest",
     "coverage": "./node_modules/.bin/jest --coverage"
   },
@@ -19,9 +19,6 @@
   "devDependencies": {
     "@types/graphql": "^14.0.3",
     "@types/jest": "^23.3.10",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
     "graphql-tools": "^4.0.3",
     "jest": "^23.6.0",
     "nodemon": "^1.18.7",
